@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{base2::layout(~{::section})}">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>movie success</title>
+<style>
+    /* CSS for styling the card */
+    .card {
+        max-width: 400px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    /* CSS for styling the button link */
+    .map-login {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #4CAF50; /* Green background */
+        color: white; /* White text */
+        text-decoration: none;
+        font-size: 16px;
+        cursor: pointer;
+        border: none;
+        border-radius: 4px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s ease;
+    }
+
+    .map-login:hover {
+        background-color: #45a049; /* Darker green when hovering */
+    }
+
+    /* CSS for styling the h2 heading */
+    h2 {
+        font-family: Arial, sans-serif;
+        font-size: 24px;
+        color: #333; /* Dark gray text color */
+        margin-bottom: 20px; /* Add some space below the heading */
+    }
+</style>
+</head>
+<body>
+<section>
+<div class="card">
+    <h2>Successfully added new movie</h2>
+<a href="map-movies" class="button-link">click here to add new movies</a>
+
+</div>
+</section>
+</body>
+</html>
+

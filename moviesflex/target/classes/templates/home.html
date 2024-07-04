@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoviesFlex</title>
+   <style>
+    body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+header {
+    background-color: #333;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h2 {
+    margin: 0;
+}
+
+header nav {
+    display: flex;
+    gap: 20px;
+}
+
+header nav a, .logout {
+    color: #fff;
+    text-decoration: none;
+}
+
+.logout {
+    background-color: red;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+section {
+    padding: 20px;
+    text-align: center;
+}
+
+section h1 {
+    font-size: 2.5em;
+}
+
+section .intro {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+section button {
+    background-color: #f00;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.container {
+    text-align: center;
+}
+
+.banner {
+    position: relative;
+    background-color: #333;
+    padding: 20px;
+}
+
+.apkmerit-logo {
+    width: 100px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.hdhub4u-banner {
+    display: inline-block;
+}
+
+.hdhub4u-banner h1 {
+    margin: 0;
+    font-size: 3em;
+}
+
+.hdhub4u-banner button {
+    background-color: #f00;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+
+
+
+
+   </style>
+</head>
+<body><div>
+    <header>
+        <h2>MoviesFlex</h2>
+        <nav>
+            <a href='/exploremovies'>Home</a>
+            
+        </nav>
+        <a href='logout' class="logout">LogOut</a>
+    </header>
+</div>
+    <div class="container">
+        <div class="movies-grid">
+            <!-- Example of a single movie poster -->
+            <div class="movie-poster">
+                <img src="img3.png" alt="Movie 1">
+            </div>
+            <!-- Repeat above div for each movie poster -->
+        </div>
+
+        <div class="banner">
+            <div class="hdhub4u-banner">
+                <h1>WelCome to MovieFlex</h1>
+                <div class="intro">
+                    <p>MovieFlex is an innovative web-based platform designed to enhance the movie-watching experience by providing personalized movie recommendations, detailed film information, and user-generated reviews. Leveraging advanced machine learning algorithms, MovieFlex curates a tailored list of films based on users' viewing history and preferences. The platform offers comprehensive movie databases that include cast and crew details, trailers, ratings, and in-depth reviews. Additionally, MovieFlex features a social component, allowing users to create profiles, follow friends, and share their own reviews and ratings, fostering a vibrant community of movie enthusiasts. This project aims to bridge the gap between film lovers and their next favorite movie, ensuring a seamless and engaging user experience.</p>
+                </div>
+                <button onclick="location.href='/exploremovies'">Explore Movies</button>
+            </div>
+        </div>
+       
+    </div>
+</body>
+</html>

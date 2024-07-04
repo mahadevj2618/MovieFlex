@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:fragment="layout(content)">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>all movies</title>
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 7px;
+            background-color: #111;
+        }
+        header img {
+            width: 150px;
+        }
+        nav a {
+            color: #ddd;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        nav a:hover {
+            color: #fff;
+        }
+       .logout {
+    background-color: red;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+ 
+    </style>
+</head>
+<body>
+    <header>
+        <h2>MoviesFlex</h2>
+        <nav>
+            <a href='/viewmovies'>Home</a>
+            <a href='viewuser'>View Users</a>
+            <a href='map-movies'>Add new Movies</a>
+        </nav>
+        
+        <a href='logout' class="logout" style="color: #fff;">LogOut</a>
+    </header>
+    
+    
+<div th:replace="${content}"></div>
+   
+</body>
+</html>

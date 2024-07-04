@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('bgmovies.png') no-repeat center center;
+            background-size: cover;
+            opacity: 0.5; /* Adjust the opacity to lighten the image */
+            z-index: -1;
+        }
+        .container {
+            display: flex;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            max-width: 900px;
+            width: 100%;
+            
+        }
+        .form-container {
+            padding: 40px;
+            flex: 1;
+        }
+        .form-container h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+        .form-container label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        .form-container input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            background: #6e8efb;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+        }
+        .form-container .social-login {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .form-container .social-login button {
+            width: 48%;
+            background: #555;
+        }
+        .form-container .social-login button.google {
+            background: #dd4b39;
+        }
+        .form-container .social-login button.facebook {
+            background: #3b5998;
+        }
+        .side-image {
+            display: none;
+        }
+        @media (min-width: 768px) {
+            .side-image {
+                display: block;
+                flex: 1;
+                background: url('img2.png') no-repeat center center;
+                background-size: cover;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h2>Sing in</h2>
+            <form action="login" method="post">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter 6 characters or more" required>
+                <button type="submit">Sing In</button>
+            </form>
+        </div>
+        <div class="side-image"></div>
+    </div>
+</body>
+</html>

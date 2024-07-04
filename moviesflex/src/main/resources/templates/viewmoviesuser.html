@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Available Movies</title>
+    <style>
+            body {
+            background-color: #0a0a0a;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 7px;
+            background-color: #111;
+        }
+        header img {
+            width: 150px;
+        }
+        nav a {
+            color: #ddd;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        nav a:hover {
+            color: #fff;
+        }
+        .logout {
+    background-color: red;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+       
+    
+      .movies-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 10px;
+      }
+      
+      .movie-item {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        text-align: center;
+      }
+      
+      .movie-item iframe {
+        width: 100%;
+        height: 200px;
+      }
+    </style>
+  </head>
+  <body>
+      <header>
+        <h2>MoviesFlex</h2>
+        <nav>
+            <a href='/exploremovies'>Home</a>
+            
+        </nav>
+        
+        <a href='logout' class="logout" style="color: #fff;">LogOut</a>
+    </header>
+    
+    <section>
+      <h2>All Movies</h2>
+      <div class="movies-grid">
+        <div th:each="movie : ${movies}" class="movie-item">
+          <h3 th:text="${movie.mname}">Movie Name</h3>
+          <div th:utext="${movie.mlink}"></div>
+        </div>      
+      </div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+body {
+            background-color: #0a0a0a;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 7px;
+            background-color: #111;
+        }
+        .logout {
+    background-color: red;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+        
+        header img {
+            width: 150px;
+        }
+        nav a {
+            color: #ddd;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        nav a:hover {
+            color: #fff;
+        }
+
+ .card {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+      }
+      .card-body {
+        padding: 20px;
+      }
